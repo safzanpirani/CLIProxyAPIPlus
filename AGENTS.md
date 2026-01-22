@@ -85,8 +85,7 @@ Cursor IDE sends requests in **Claude/Anthropic format**, but CLIProxyAPI was on
 | File | Changes |
 |------|---------|
 | `internal/translator/antigravity/openai/chat-completions/antigravity_openai_request.go` | Added Claude format handling for tools, tool_use, tool_result |
-| `internal/runtime/executor/antigravity_executor.go` | Updated system instruction, added debug logging |
-| `sdk/api/handlers/openai/openai_handlers.go` | Added request logging for debugging |
+| `internal/translator/antigravity/openai/chat-completions/antigravity_openai_request_test.go` | 13 unit tests for Claude format translation |
 
 ---
 
@@ -105,8 +104,8 @@ Cursor IDE sends requests in **Claude/Anthropic format**, but CLIProxyAPI was on
 ## Known Issues / TODO
 
 - [x] ~~400 error after first tool call~~ - Fixed: empty user messages were being added
-- [ ] Clean up debug logging after issues resolved
-- [ ] Add unit tests for Claude format translation
+- [x] ~~Clean up debug logging after issues resolved~~ - No debug logging was added to this fork
+- [x] ~~Add unit tests for Claude format translation~~ - Added 13 comprehensive tests
 - [ ] Test with other Antigravity models (gemini-2.5-flash, etc.)
 
 ---
